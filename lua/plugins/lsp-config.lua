@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls","typos_lsp",'marksman'}
+        ensure_installed = { "quick_lint_js" , "lua_ls","rust_analyzer" }
       })
     end
   },
@@ -17,11 +17,13 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require('lspconfig')
-      lspconfig.lua_ls.setup({})
-      lspconfig.typos_lsp.setup({})
+     lspconfig.quick_lint_js.setup({})
+     lspconfig.lua_ls.setup({})
+     lspconfig.rust_analyzer.setup({})
       vim.keymap.set('n','K',vim.lsp.buf.hover,{})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
       vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action,{})
     end
   }
 }
+
