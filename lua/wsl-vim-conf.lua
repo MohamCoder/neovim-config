@@ -1,5 +1,5 @@
-vim.api.nvim_set_keymap('n', 'p', '"+p:%s/\r//g<CR>', {noremap = true})
-vim.api.nvim_set_keymap('v', 'p', '"+p:%s/\r//g<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', 'p', '"+p:%s/\r/\n\r/g<CR>', {noremap = true})
+vim.api.nvim_set_keymap('v', 'p', '"+p:%s/\r/\n\r/g<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', 'y', '"+y', {noremap = true})
 vim.api.nvim_set_keymap('v', 'y', '"+y', {noremap = true})
 vim.cmd("set autochdir")

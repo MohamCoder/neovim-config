@@ -17,9 +17,9 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require('lspconfig')
-     lspconfig.quick_lint_js.setup({})
-     lspconfig.lua_ls.setup({})
-     lspconfig.rust_analyzer.setup({})
+     lspconfig.quick_lint_js.setup({flags = { allow_incremental_sync = false}})
+     lspconfig.lua_ls.setup({flags = { allow_incremental_sync = false}})
+     lspconfig.rust_analyzer.setup({flags = { allow_incremental_sync = false}})
       vim.keymap.set('n','K',vim.lsp.buf.hover,{})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
       vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action,{})
