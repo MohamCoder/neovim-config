@@ -3,8 +3,8 @@ return {
 	dependencies = {
 		"rcarriga/nvim-dap-ui",
 		"mxsdev/nvim-dap-vscode-js",
-		"mfussenegger/nvim-dap-python", -- add this line
-		-- build debugger from source
+		"mfussenegger/nvim-dap-python",
+    "nvim-neotest/nvim-nio"
 	},
 	keys = {
 		-- normal mode is default
@@ -41,12 +41,12 @@ return {
 	},
 	config = function()
 		require("dap-vscode-js").setup({
-			debugger_path = "/mnt/d/dev/nvim/debuggers/vscode-js-debug",
-			adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
+			debugger_path = "~/.config/nvim/debuggers/vscode-js-debug",
+			adapters = { "pwa-node", "pwa-firefox", "pwa-msedge", "node-terminal", "pwa-extensionHost" },
 		})
 
 		-- add this block
-		require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python3.10")
+		require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python3.13")
 
 		for _, language in ipairs({ "typescript", "javascript", "svelte" }) do
 			require("dap").configurations[language] = {
