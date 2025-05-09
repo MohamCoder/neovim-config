@@ -7,11 +7,7 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "rust_analyzer", "pyright" ,"ts_ls"},
-      })
-    end,
+    config = function() end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -38,7 +34,7 @@ return {
         capabilities = capabilities,
         flags = { allow_incremental_sync = false },
       })
-     lspconfig.tailwindcss.setup({
+      lspconfig.tailwindcss.setup({
         capabilities = capabilities,
         flags = { allow_incremental_sync = false },
       })
