@@ -8,13 +8,13 @@ return {
       vim.api.nvim_set_keymap(
         "n",
         "<C-p>",
-        ':lua require("telescope.builtin").find_files({ cwd = "/home/mohammedali/", file_ignore_patterns = {"node_modules" ,"Games"} })<CR>',
+        ':lua require("telescope.builtin").find_files({ cwd = "~/", file_ignore_patterns = {"node_modules" ,"Games"} })<CR>',
         { noremap = true, silent = true }
       )
       vim.api.nvim_set_keymap(
         "n",
         "<leader>fg",
-        ':lua require("telescope.builtin").live_grep({ cwd = "/home/mohammedali/", file_ignore_patterns = {"node_modules","Games"} })<CR>',
+        ':lua require("telescope.builtin").live_grep({ cwd = "~/", file_ignore_patterns = {"node_modules","Games"} })<CR>',
         { noremap = true, silent = true }
       )
     end,
