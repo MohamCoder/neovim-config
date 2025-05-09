@@ -12,5 +12,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
-require("wsl-vim-conf")
+require("vim-conf")
 require("lazy").setup("plugins")

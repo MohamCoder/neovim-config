@@ -6,7 +6,7 @@ return {
     require ("nvim-treesitter.install").compilers = { "gcc"}
     configs.setup({
       auto_install = true,
-      ensure_installed = { "lua", "javascript", "html",'css' ,"python" },
+      ensure_installed = { "svelte","lua", "javascript", "html",'css' ,"python","norg" },
       highlight = {
         enable = true,
       },
